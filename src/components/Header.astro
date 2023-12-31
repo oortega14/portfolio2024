@@ -1,8 +1,20 @@
-<header class="flex justify-center">
-  <img src="" alt="logo"/>
-
-  <a href="/">Home</a>
-  <a href="/">About</a>
-  <a href="/">Projects</a>
-  <a href="/">Contact</a>
+<header class="fixed w-screen py-4 z-20 backdrop-blur-sm top-0 px-8 lg:px-0">
+  <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+    <a href="/" class="col-span-1">
+      <img src="/favicon.svg" alt="logo" width="50" alt="logo" class="">
+    </a>
+    <nav class="col-span-1 justify-self-center">
+      <ul class="flex gap-4">
+        <a>Inicio</a>
+        <a href="#experience" class="cursor-pointer z-50">Experiencia</a>
+        <a>Proyectos</a>
+        <a>Contacto</a>
+      </ul>
+    </nav>
+    <div class="flex justify-center w-full">
+      <button class="border-2 border-slate-200 hover:bg-slate-200 hover:text-black min-w-12 rounded-sm ">
+        ES
+      </button>
+    </div>
+  </div>
 </header>
