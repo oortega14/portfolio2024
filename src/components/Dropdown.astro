@@ -1,0 +1,32 @@
+<div>
+  <select name="locale" id="selectLocale" class="rounded-md px-2 bg-transparent border text-white" >
+    <option value="en" class="rounded-md px-2 bg-transparent border text-black">en</option>
+    <option value="es" class="rounded-md px-2 bg-transparent border text-black">es</option>
+  </select>
+</div>
+
+<script>
+  // Función para obtener el valor del parámetro de la URL
+  const pathname = new URL(window.location.href).pathname;
+  const parts = pathname.split('/');
+  const currentLocale = parts[1];
+  const currentURL = window.location.href
+  const langEsIndex = currentURL.indexOf('/es');
+  const langEnIndex = currentURL.indexOf('/en');
+  let newURL = ''
+  if (langEnIndex !== -1) {
+    newURL = currentURL.slice(0, langEnIndex) + currentURL.slice(langEnIndex + 3);
+  } else if ( langEsIndex !== -1) {
+    newURL = currentURL.slice(0, langEsIndex) + currentURL.slice(langEsIndex + 3);
+  }
+
+  const selectElement : any = document.getElementById('selectLocale');
+  selectElement.value = currentLocale;
+  selectElement.addEventListener('change', function(e: any) {
+    e.preventDefault();
+    const selectedValue = e.target.value;
+    if (selectedValue === "en" || selectedValue === "es") {
+      window.location.href = `${newURL}/${selectedValue}`;
+    }
+  });
+</script>

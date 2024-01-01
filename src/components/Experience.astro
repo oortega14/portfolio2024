@@ -1,22 +1,27 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+
+import { getI18N } from "./i18n/";
+const { currentLocale = "en" } = Astro;
+const i18n = getI18N({ currentLocale });
+
 const EXPERIENCE = [
   {
-    date: 'Actualmente...',
-    title: 'Back-end developer on Ruby on Rails',
-    description: 'Maintenance of an API developed in Ruby on Rails, asynchronous jobs, manipulation of XML, communication with other microservices, conducting tests with RSpec for controllers and models, and using Azure DevOps for project management.',
+    date: `${i18n.FIRST_DATE}`,
+    title: `${i18n.FIRST_EXPERIENCE_TITLE}`,
+    description: `${i18n.FIRST_EXPERIENCE_DESCRIPTION}`,
     //link: '#'
   },
   {
-    date: 'September/2022 - March/2023',
-    title: 'Back-end developer on Ruby on Rails',
-    description: 'Maintenance a monolith built in Ruby on Rails, create new modules and fix bugs in the modules created, migrate some views from Rails to React using bootstrap and Sass, implement Okta authentication and deploy on Heroku.',
+    date: `${i18n.SECOND_DATE}`,
+    title: `${i18n.SECOND_EXPERIENCE_TITLE}`,
+    description: `${i18n.SECOND_EXPERIENCE_DESCRIPTION}`,
     //link: '#'
   },
   {
-    date: 'January/2020 - July/2022',
-    title: 'Fullstack developer',
-    description: 'I developed a MVP for an academy like Udemy or Platzi where backend was developed on Ruby on Rails and Frontend in React.js. I also build landing pages for a startup in react.js for different companies taking care of all details required for every company. Finally I have worked in another freelance projects where I implement microservices, managed asynchronous jobs with Redis, Sidekiq and Kafka. Deployments on AWS and Heroku. ',
+    date: `${i18n.THIRD_DATE}`,
+    title: `${i18n.THIRD_EXPERIENCE_TITLE}`,
+    description: `${i18n.THIRD_EXPERIENCE_DESCRIPTION}`,
     //link: '#'
   }
 ]

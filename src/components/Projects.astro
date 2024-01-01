@@ -3,6 +3,12 @@ import NextJSIcon from "../icons/NextJSIcon.astro";
 import ProjectImage from "./ProjectImage.astro";
 import ProjectInfo from "./ProjectInfo.astro";
 
+
+import { getI18N } from "./i18n/";
+const { currentLocale = "en" } = Astro;
+const i18n = getI18N({ currentLocale });
+
+
 const TAGS = {
   NEXT: {
     name: 'Next JS',
@@ -22,24 +28,24 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "TechHub",
-    description: "El proyecto TechHub es un e-commerce diseñado y desarrollado desde cero para ofrecer a los entusiastas de la tecnología una experiencia de compra única. Con un enfoque en dispositivos electrónicos, gadgets y accesorios, TechHub proporciona una plataforma de comercio electrónico intuitiva y atractiva.",
+    title: `${i18n.FIRST_PROJECT_TITLE}`,
+    description: `${i18n.FIRST_PROJECT_DESCRIPTION}`,
     link: "#",
     github: "#",
     image: '/bg-ecommerce.webp',
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.RUBY],
   },
   {
-    title: "ISWO academy",
-    description: "Una plataforma educativa integral desarrollada con tecnologías de vanguardia, combinando Next.js en el frontend y Ruby on Rails en el backend. Diseñada para ofrecer una experiencia de aprendizaje en línea excepcional, LearnHub aborda las necesidades de estudiantes y educadores, proporcionando un entorno virtual robusto y colaborativo.",
+    title: `${i18n.SECOND_PROJECT_TITLE}`,
+    description: `${i18n.SECOND_PROJECT_DESCRIPTION}`,
     link: "#",
     github: "#",
     image: '/banner_academy.webp',
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.RUBY],
   },
   {
-    title: "Clothes Shop",
-    description: "Es una vibrante tienda de ropa en línea creada con la potente combinación de React en el frontend y Ruby on Rails en el backend. Diseñada para los amantes de la moda, StyleBoutique ofrece una experiencia de compra digital única, combinando elegancia y tecnología para brindar un escaparate en línea atractivo y funcional",
+    title: `${i18n.THIRD_PROJECT_TITLE}`,
+    description: `${i18n.THIRD_PROJECT_DESCRIPTION}`,
     link: "#",
     github: "#",
     image: '/banner_musicshop.webp',
