@@ -56,7 +56,13 @@ const PROJECTS = [
 
 {
   PROJECTS.map(({ image, title, description, tags }) => (
-    <div class="flex justify-center items-center w-full my-12 gap-x-12">
+    <div class={`
+      flex flex-wrap
+      sm:flex-wrap
+      lg:justify-center lg:items-center lg:w-full lg:my-12 lg:gap-x-12
+      xl:flex-nowrap 
+      
+    `}>
       <ProjectImage image={image} />
       <ProjectInfo title={title} description={description} tags={tags}/>
     </div>  

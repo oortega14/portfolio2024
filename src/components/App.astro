@@ -18,7 +18,15 @@ const i18n = getI18N({ currentLocale });
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <main class="px-4">
-    <SectionContainer class="py-60" id="home">
+    <SectionContainer 
+      class={`
+        py-60
+        lg:px-10
+        xl:py-[12rem]
+        2xl:py-[22rem]
+      `}
+      id="home"
+    >
       <img
         class="size-12 rounded-full"
         src="/avataroscar.png"
@@ -46,7 +54,10 @@ const i18n = getI18N({ currentLocale });
           >{i18n.INTRO_DESCRIPTION_3}</span
         >
       </h2>
-      <nav class="flex gap-x-2 mt-6">
+      <nav class={`
+        flex gap-x-2 mt-6 flex-wrap gap-y-2
+        lg:gap-x-2 lg:mt-6
+      `}>
         <SocialPill
           href="https://www.linkedin.com/in/oscar-ortega-guerrero-94ba76243/"
         >
@@ -64,7 +75,14 @@ const i18n = getI18N({ currentLocale });
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experience" class="pb-32">
+    <SectionContainer 
+      id="experience" 
+      class={`
+        pb-32
+        xl:pb-32
+        2xl:py-36
+      `}
+    >
       <h2 class="text-2xl font-semibold mb-5 flex items-center gap-x-3">
         <Briefcase class="size-6" />
          {i18n.EXPERIENCE_TITLE}
