@@ -1,14 +1,14 @@
 <header class="fixed w-screen py-4 z-20 backdrop-blur-sm top-0 px-8 lg:px-0">
   <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
     <a href="/" class="col-span-1">
-      <img src="/favicon.svg" alt="logo" width="50" alt="logo" class="">
+      <img src="/favicon.svg" alt="logo" width="50" alt="logo" >
     </a>
     <nav class="col-span-1 justify-self-center">
       <ul class="flex gap-4">
-        <a>Inicio</a>
+        <a href="#home">Inicio</a>
         <a href="#experience" class="cursor-pointer z-50">Experiencia</a>
-        <a>Proyectos</a>
-        <a>Contacto</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
       </ul>
     </nav>
     <div class="flex justify-center w-full">
@@ -18,3 +18,20 @@
     </div>
   </div>
 </header>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((anchor: any) => {
+    anchor.addEventListener('click', function (this: any, e: Event) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 100;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,21 @@
+---
+import TechnologyPill from "./TechnologyPill.astro";
+const {title, description, tags} = Astro.props
+const typedTags: { name: string, class: string, icon: any }[] = tags;
+---
+
+<div class="flex flex-col w-auto">
+  <div class="w-full">
+    <h1 class="text-4xl font-semibold pb-2">{title}</h1>
+    <p class="text-pretty">{description}</p>
+  </div>
+  <div class="w-full flex gap-x-3">
+    {
+      typedTags.map((tag) => (
+        <TechnologyPill class={tag.class} >
+          {tag.name}
+        </TechnologyPill>
+      )) 
+    }
+  </div>
+</div>

@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
   description="A Brief description of my expirience developing"
 >
   <main class="px-4">
-    <SectionContainer class="pt-24 pb-24">
+    <SectionContainer class="py-60" id="home">
       <img
         class="size-12 rounded-full"
         src="/avataroscar.png"
@@ -41,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
       <h2 class="text-2xl text-wrap">
         <span>+3 años de experiencia</span><span class="opacity-80"
           >Desarrollador Web.
-        </span><span class="text-yellow-200/90">De Pasto, Colombia.</span><span
+        </span><span class="text-yellow-200/90">De Pasto, Colombia. </span><span
           class="text-red-200/90">Especializado en Ruby on Rails.</span
         >
       </h2>
@@ -65,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experience">
+    <SectionContainer id="experience" class="pb-32">
       <h2 class="text-2xl font-semibold mb-5 flex items-center gap-x-3 ">
 				<Briefcase class="size-8"/>
 				Experiencia Laboral
@@ -73,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyects">
+    <SectionContainer id="projects">
       <h2 class="text-2xl font-semibold mb-5 flex items-center gap-x-3 ">
 				<ProyectsIcon class="size-8"/>
 				Proyectos

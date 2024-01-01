@@ -1,0 +1,21 @@
+---
+import BentoItem from "./BentoItem.astro";
+
+const { currentLocale } = Astro;
+const { title, image } = Astro.props
+---
+
+<section>
+  <BentoItem class="size-96" title={title}>
+    <div
+      slot="image"
+      class="
+        absolute left-0 top-0 bottom-0 w-full rounded-md
+        h-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10
+      "
+      style=`background-image: url(${image})`
+    >
+    </div>
+  </BentoItem>
+</section>
