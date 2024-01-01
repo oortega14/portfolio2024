@@ -20,7 +20,8 @@ const i18n = getI18N({ currentLocale });
   <main class="px-4">
     <SectionContainer 
       class={`
-        py-60
+        py-36
+        sm:py-60
         lg:px-10
         xl:py-[12rem]
         2xl:py-[22rem]
@@ -29,7 +30,7 @@ const i18n = getI18N({ currentLocale });
     >
       <img
         class="size-12 rounded-full"
-        src="/avataroscar.png"
+        src="/profile_picture.webp"
         alt="Rounded avatar"
       />
 
@@ -47,7 +48,7 @@ const i18n = getI18N({ currentLocale });
           <Badge>{i18n.INTRO_BADGE}</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-2xl text-wrap text-center sm:text-left">
         <span>{i18n.INTRO_DESCRIPTION_1} </span><span class="text-yellow-200/90"
           >{i18n.INTRO_DESCRIPTION_2} 
         </span><span class="text-red-200/90"

@@ -7,9 +7,9 @@ const typedTags: { name: string, class: string, icon: any }[] = tags;
 <div class="flex flex-col w-full">
   <div class="w-full">
     <h1 class="text-4xl font-semibold pb-2">{title}</h1>
-    <p class="text-pretty">{description}</p>
+    <p class="lg:text-pretty text-center lg:text-start">{description}</p>
   </div>
-  <div class="w-full flex flex-wrap gap-x-3 pb-5">
+  <div class="w-full flex flex-wrap gap-x-3 pb-5 justify-center">
     {
       typedTags.map((tag) => (
         <TechnologyPill class={tag.class} >
